@@ -1,7 +1,7 @@
 import * as THREE from "three";
 import {TextureLoader} from "three";
 //Textures
-const baseUrl = "src/assets";
+const baseUrl = "/assets";
 const textureLoader = new TextureLoader();
 const mercuryTexture = textureLoader.load(`${baseUrl}/2k_mercury.jpg`);
 const venusTexture = textureLoader.load(`${baseUrl}/2k_venus.jpg`);
