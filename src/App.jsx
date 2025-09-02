@@ -15,7 +15,7 @@ export default function App() {
         const textureLoader = new TextureLoader();
         const backgroundTextureLoader = new CubeTextureLoader();
 
-        backgroundTextureLoader.setPath("/assets/");
+        backgroundTextureLoader.setPath("/THREE-JS/assets/");
 
         //Background
         const backgroundTexture = backgroundTextureLoader.load([
@@ -31,7 +31,7 @@ export default function App() {
         //Saturn Ring with repeating texture
         const ringGeometry = new THREE.RingGeometry(8, 10, 64); // Tăng segments để smooth hơn
         const ringTexture = textureLoader.load(
-            `/assets/2k_saturn_ring_alpha.png`
+            `/THREE-JS/assets/2k_saturn_ring_alpha.png`
         );
 
         // Thiết lập lặp lại texture theo chiều ngang của vòng
@@ -48,7 +48,7 @@ export default function App() {
         ringMesh.rotation.x = -Math.PI / 2.5;
 
         //Sun
-        const sunTexture = textureLoader.load(`/assets/2k_sun.jpg`);
+        const sunTexture = textureLoader.load(`/THREE-JS/assets/2k_sun.jpg`);
         const sunMaterial = new THREE.MeshBasicMaterial({map: sunTexture});
         const sunGeometry = new THREE.SphereGeometry(10, 32, 32);
         const sunMesh = new THREE.Mesh(sunGeometry, sunMaterial);
